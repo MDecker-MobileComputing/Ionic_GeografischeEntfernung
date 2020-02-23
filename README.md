@@ -12,6 +12,7 @@ Add plugin [geolocation](https://ionicframework.com/docs/native/geolocation) for
 
 ````
 ionic cordova plugin add cordova-plugin-geolocation
+
 npm install @ionic-native/geolocation
 ````
 
