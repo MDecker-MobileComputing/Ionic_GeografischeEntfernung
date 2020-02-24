@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { AlertController, NavController } from '@ionic/angular';
+import { ErgebnisService } from '../ergebnis.service';
 
 @Component({
   selector: 'app-home',
@@ -19,10 +20,13 @@ export class HomePage {
   /**
    * Konstruktor für Dependency Injection.
    */
-  constructor(private geolocation: Geolocation    ,
-              private alertCtrl  : AlertController,
-              private navCtrl    : NavController
-            ) {}
+  constructor( private ergService : ErgebnisService,
+               private geolocation: Geolocation    ,
+               private alertCtrl  : AlertController,
+               private navCtrl    : NavController    ) {
+  }
+
+
 
 
   /**
@@ -46,9 +50,12 @@ export class HomePage {
 
       console.log(`Entfernung zu KA: ${entfernungKilometer} km`);
 
-      entfernungKilometer = this.kommastellenAbschneiden(Number(entfernungKilometer), 2);
+      entfernungKilometer = this.kommastellenAbschneiden( Number(entfernungKilometer), 2);
+
+      this.ergService.setEntfernungKilometer(entfernungKilometer);
 
       //this.zeigeDialog("Ergebnis", `Entfernung von KA: ${entfernungKilometer} km`);
+
       this.navCtrl.navigateForward("/ergebnis");
 
      }).catch((error) => {
