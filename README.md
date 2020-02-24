@@ -16,7 +16,7 @@ ionic cordova plugin add cordova-plugin-geolocation
 npm install @ionic-native/geolocation
 ````
 
-Add to `Geolocation` to array `providers` in file [src/app/app.module.ts](src/app/app.module.ts).
+Add `Geolocation` to array `providers` in file [src/app/app.module.ts](src/app/app.module.ts).
 
 <br>
 
