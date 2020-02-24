@@ -14,8 +14,12 @@ export class ErgebnisService {
 
   private _entfernungKilometer : Number = 0.0;
 
+  private _geoBreite : Number = 0.0;
 
-  constructor() {}
+  private _geoLaenge : Number = 0.0;
+
+
+  //constructor() {}
 
 
   setEntfernungKilometer(entfernung: Number) {
@@ -27,6 +31,51 @@ export class ErgebnisService {
   getEntfernungKilometer() : Number {
 
     return this._entfernungKilometer;
+  }
+
+
+  setAktuelleKoordinaten(geoBreite: Number, geoLaenge: Number) {
+
+    this._geoBreite = geoBreite;
+    this._geoLaenge = geoLaenge;
+  }
+
+
+  getAktuelleGeoBreite() : Number {
+
+    return this._geoBreite;
+  }
+
+
+  getAktuelleGeoLaenge() : Number {
+
+    return this._geoLaenge;
+  }
+
+
+  getNordOderSued() : string {
+
+    if (this._geoBreite > 0.0) {
+
+      return "Nord";
+
+    } else {
+
+      return "Süd";
+    }
+  }
+
+
+  getOstOderWest() : string {
+
+    if (this._geoLaenge > 0.0) {
+
+      return "Ost";
+
+    } else {
+
+      return "West";
+    }
   }
 
 }

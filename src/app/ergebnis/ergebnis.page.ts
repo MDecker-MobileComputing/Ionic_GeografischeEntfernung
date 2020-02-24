@@ -11,5 +11,4 @@ export class ErgebnisPage {
   constructor(private ergService : ErgebnisService) {
   }
 
-
 }

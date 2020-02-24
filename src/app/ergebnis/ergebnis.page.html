@@ -6,9 +6,28 @@
 
 <ion-content>
 
-  <h3>Aktuelle Entfernung nach KA:</h3>
+  <ion-text color="secondary">
+    <h3>Aktuelle Entfernung nach KA:</h3>
+  </ion-text>
 
-  <h1>{{ergService.getEntfernungKilometer()}} km</h1>
+  <ion-text color="primary">
+    <h1>{{ergService.getEntfernungKilometer()}} km</h1>
+  </ion-text>
+
+  &nbsp;
+
+
+  <ion-text color="secondary">
+    <h3>Aktuelle Koordinaten:</h3>
+  </ion-text>
+
+  <ion-text color="tertiary">
+    <h4>
+      {{ergService.getAktuelleGeoBreite()}}° {{ergService.getNordOderSued()}}
+      <br>
+      {{ergService.getAktuelleGeoLaenge()}}° {{ergService.getOstOderWest()}}
+    </h4>
+  </ion-text>
 
   &nbsp;
 

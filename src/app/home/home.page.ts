@@ -52,9 +52,8 @@ export class HomePage {
 
       entfernungKilometer = this.kommastellenAbschneiden( Number(entfernungKilometer), 2);
 
-      this.ergService.setEntfernungKilometer(entfernungKilometer);
-
-      //this.zeigeDialog("Ergebnis", `Entfernung von KA: ${entfernungKilometer} km`);
+      this.ergService.setEntfernungKilometer( entfernungKilometer  );
+      this.ergService.setAktuelleKoordinaten( geoBreite, geoLaenge );
 
       this.navCtrl.navigateForward("/ergebnis");
 
