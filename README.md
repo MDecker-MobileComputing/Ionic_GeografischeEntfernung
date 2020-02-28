@@ -1,4 +1,4 @@
-# Ionic-App "Entfernungsberechung #
+# Ionic-App "Entfernungsberechung" (Distance Calculation) #
 
 Simple [Ionic](https://ionicframework.com) app that tries to obtain current (GPS) location
 from device and the calculates the distance to a hard-coded coordinate.
