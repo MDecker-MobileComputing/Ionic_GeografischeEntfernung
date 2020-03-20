@@ -98,7 +98,7 @@ export class HomePage {
    *
    * @return  Entfernung in Kilometern
    */
-  entfernung(lat1, lon1, lat2, lon2) : Number {
+  entfernung(lat1, lon1, lat2, lon2) : number {
 
       let radlat1 = Math.PI * lat1/180;
       let radlat2 = Math.PI * lat2/180;

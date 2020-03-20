@@ -13,44 +13,44 @@ import { Injectable } from '@angular/core';
 export class ErgebnisService {
 
   /** Entfernung zwischen KA und aktuellem Aufenthaltsort laut Ortung (z.B. GPS) in km. */
-  private _entfernungKilometer : Number = 0.0;
+  private _entfernungKilometer : number = 0.0;
 
   /** Geografische Breite aktueller Aufenthaltsort (Nord/Süd). */
-  private _geoBreite : Number = 0.0;
+  private _geoBreite : number = 0.0;
   
   /** Geografische Länge aktueller Aufenthaltsort (Ost/West). */
-  private _geoLaenge : Number = 0.0;
+  private _geoLaenge : number = 0.0;
 
 
   //constructor() {}
 
 
-  setEntfernungKilometer(entfernung: Number) {
+  setEntfernungKilometer(entfernung: number) {
 
     this._entfernungKilometer = entfernung;
   }
 
 
-  getEntfernungKilometer() : Number {
+  getEntfernungKilometer() : number {
 
     return this._entfernungKilometer;
   }
 
 
-  setAktuelleKoordinaten(geoBreite: Number, geoLaenge: Number) {
+  setAktuelleKoordinaten(geoBreite: number, geoLaenge: number) {
 
     this._geoBreite = geoBreite;
     this._geoLaenge = geoLaenge;
   }
 
 
-  getAktuelleGeoBreite() : Number {
+  getAktuelleGeoBreite() : number {
 
     return this._geoBreite;
   }
 
 
-  getAktuelleGeoLaenge() : Number {
+  getAktuelleGeoLaenge() : number {
 
     return this._geoLaenge;
   }
