@@ -29,12 +29,15 @@ export class HomePage {
 
   /**
    * Event-Handler-Methode für Button "Entfernung zu KA berechnen".
+   * Zur Verwendung von Geolocation mit Android siehe auch den folgenden Blog-Artikel von Ionic:
+   * https://ionicframework.com/blog/testing-geolocation-on-android/
+   * Es wird empfohlen, einen Timeout-Wert von 30000ms (=30s) zu setzen.
    */
   async onEntfernungBerechnenButton() {
 
     console.log("Ortung angefordert ...");
 
-    this.geolocation.getCurrentPosition().then( (ergebnisObjekt) => {
+    this.geolocation.getCurrentPosition({ timeout: 30000 }).then( (ergebnisObjekt) => {
 
       let geoBreite = ergebnisObjekt.coords.latitude;
       let geoLaenge = ergebnisObjekt.coords.longitude;
