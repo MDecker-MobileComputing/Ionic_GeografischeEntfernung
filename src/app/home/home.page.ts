@@ -42,9 +42,9 @@ export class HomePage {
       console.log(`geoBreite=${geoBreite}, geoLaenge=${geoLaenge}`);
 
       let entfernungKilometer =
-          this.entfernung( this.GEO_BREITE_KA, this.GEO_LAENGE_KA,
-                           geoBreite,          geoLaenge
-                         );
+          this.berechneEntfernung( this.GEO_BREITE_KA, this.GEO_LAENGE_KA,
+                                   geoBreite,          geoLaenge
+                                 );
 
       console.log(`Entfernung zu KA: ${entfernungKilometer} km`);
 
@@ -98,7 +98,7 @@ export class HomePage {
    *
    * @return  Entfernung in Kilometern
    */
-  entfernung(lat1, lon1, lat2, lon2) : number {
+  berechneEntfernung(lat1:number, lon1:number, lat2:number, lon2:number) : number {
 
       let radlat1 = Math.PI * lat1/180;
       let radlat2 = Math.PI * lat2/180;
