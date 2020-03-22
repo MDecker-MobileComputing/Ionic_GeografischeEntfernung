@@ -34,10 +34,10 @@ export class HomePage {
 
     console.log("Ortung angefordert ...");
 
-    this.geolocation.getCurrentPosition().then((resp) => {
+    this.geolocation.getCurrentPosition().then( (ergebnisObjekt) => {
 
-      let geoBreite = resp.coords.latitude;
-      let geoLaenge = resp.coords.longitude;
+      let geoBreite = ergebnisObjekt.coords.latitude;
+      let geoLaenge = ergebnisObjekt.coords.longitude;
 
       console.log(`geoBreite=${geoBreite}, geoLaenge=${geoLaenge}`);
 
@@ -55,9 +55,9 @@ export class HomePage {
 
       this.navCtrl.navigateForward("/ergebnis");
 
-     }).catch((error) => {
+     }).catch( (fehlerObjekt) => {
 
-      let fehlerString = `${error.constructor.name}: ${error.message} (Error code: ${error.code})`;
+      let fehlerString = `${fehlerObjekt.constructor.name}: ${fehlerObjekt.message} (Error code: ${fehlerObjekt.code})`;
 
       console.log("Fehler bei Ortungsabfrage:", fehlerString);
       this.zeigeDialog("Fehler bei Ortung"    , fehlerString);
