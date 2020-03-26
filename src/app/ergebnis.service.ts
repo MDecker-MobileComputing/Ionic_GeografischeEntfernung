@@ -17,7 +17,7 @@ export class ErgebnisService {
 
   /** Geografische Breite aktueller Aufenthaltsort (Nord/Süd). */
   private _geoBreite : number = 0.0;
-  
+
   /** Geografische Länge aktueller Aufenthaltsort (Ost/West). */
   private _geoLaenge : number = 0.0;
 
@@ -44,15 +44,25 @@ export class ErgebnisService {
   }
 
 
-  getAktuelleGeoBreite() : number {
+  /**
+   * Getter für Absolut-Wert geografische Breite.
+   *
+   * @return Geografische Breite ohne Vorzeichen, weil für Nord/Süd gibt es Methode getNordOderSued().
+   */
+  getAktuelleGeoBreiteAbs() : number {
 
-    return this._geoBreite;
+    return Math.abs( this._geoBreite );
   }
 
 
-  getAktuelleGeoLaenge() : number {
+  /**
+   *  Getter für Absolut-Wert geografische Länge.
+   *
+   * @return Geografische Länge ohne Vorzeichen, weil für Unterscheidung Ost/West gibt es Methode getOstOderWest().
+   */
+  getAktuelleGeoLaengeAbs() : number {
 
-    return this._geoLaenge;
+    return Math.abs( this._geoLaenge );
   }
 
 
