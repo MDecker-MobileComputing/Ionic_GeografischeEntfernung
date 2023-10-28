@@ -1,12 +1,17 @@
 # Ionic-App "Entfernungsberechung" (Distance Calculation) #
 
+<br>
+
 Simple [Ionic](https://ionicframework.com) app that tries to obtain current (GPS) location
 from device and the calculates the distance to a hard-coded coordinate.
 
 <br>
 
 ----
+
 ## Plugin for locating ##
+
+<br>
 
 Add plugin [geolocation](https://ionicframework.com/docs/native/geolocation) for GPS locating:
 
@@ -21,7 +26,10 @@ Add `Geolocation` to array `providers` in file [src/app/app.module.ts](src/app/a
 <br>
 
 ----
+
 ## Stand-alone program for testing distance calculation ##
+
+<br>
 
 Stand-alone programm for test of distance calculation:
 [DistanzZwischenZweiKoordinaten.js](DistanzZwischenZweiKoordinaten.js)
@@ -33,14 +41,22 @@ node DistanzZwischenZweiKoordinaten.js
 <br>
 
 ----
+
 ## Screenshots ##
+
+<br>
 
 ![Screenshot 1](screenshot_1.png)   ![Screenshot 2](screenshot_2.png)
 
 <br>
 
 ----
+
 ## License ##
+
+<br>
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License)
 for the files in this repository.
+
+<br>
